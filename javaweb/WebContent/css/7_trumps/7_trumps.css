@@ -1,0 +1,21 @@
+.subscribe > .field {
+  width: 250px;
+}
+
+.frm .field {
+  margin: 20px !important;
+}
+
+.frm .field > input {
+  width: 345px;
+}
+
+.frm .btn-blue {
+  position: relative;
+  left: 341px;
+}
+
+.big > i > img {
+  margin-top: 7px;
+  vertical-align: top !important;
+}

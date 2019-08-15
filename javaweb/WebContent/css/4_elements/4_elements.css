@@ -1,0 +1,65 @@
+@import "reset.css";
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+button {
+  font-size: 16px;
+  height: 35px;
+  transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -webkit-ransition: all .3s ease-in-out;
+  width: 100px;
+}
+
+nav {
+  margin-left: 20px;
+  flex-grow: 1;
+}
+
+.cards-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "header header"
+                       "left   right"
+                       "footer footer";
+  grid-template-columns: 1fr 1fr;
+  margin: 20px auto;
+  min-width: 550px;
+  width: 80%;
+}
+
+.content {
+  grid-area: left;
+  margin-left: 35px;
+}
+
+.footer {
+  grid-area: footer;
+  margin: 35px;
+}
+
+.header {
+  display: flex;
+  grid-area: header;
+  height: 35px;
+}
+
+.second-content {
+  grid-area: right;
+  justify-self: end;
+  margin-right: 35px;
+}
+
+.vcards-container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}

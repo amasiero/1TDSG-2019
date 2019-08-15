@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/main.style.css" type="text/css" />
+    <title>iLearn - Improve your knowledge</title>
+  </head>
+  <body>
+    <section class="container">
+
+      <header class="header">
+
+        <a href="index.html" class="brand">
+          <h1>iLearn</h1>
+        </a>
+
+        <nav class="navigation">
+          <ul>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+
+        <button class="btn-white">Entrar</button>
+        <button class="btn-blue">Cadastrar</button>
+
+      </header>
+
+      <article class="content">
+        <div class="frm">
+          <h1>Esperamos sua mensagem</h1>
+          <form method="post">
+            <div class="field">
+              <i><img src="img/user.png" alt="Icone de uma pessoa"></i>
+              <input type="text" name="name" placeholder="Informe seu nome." required/>
+            </div>
+            <div class="field">
+              <i><img src="img/mobile.png" alt="Icone de um telefone"></i>
+              <input type="tel" name="phone" maxlength="15" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" placeholder="Informe seu telefone." title="Coloque no formato (XX) XXXXX-XXXX"/>
+            </div>
+            <div class="field">
+              <i><img src="img/email.png" alt="Icone de um envelope"></i>
+              <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Informe seu e-mail." required/>
+            </div>
+            <div class="field big">
+              <i><img src="img/text.png" alt="Icone de um texto"></i>
+              <textarea rows="7" cols="60" placeholder="Digite sua mensagem." required></textarea>
+            </div>
+            <button class="btn-blue">Enviar</button>
+          </form>
+        </div>
+      </article>
+
+      <picture class="second-content">
+        <img src="img/woman.png" class="ilustration" alt="Ilustração de uma mulher sentada no sofá mexendo no computador." />
+      </picture>
+
+      <footer class="footer">
+        <p>&copy; 2019 - Desenvolvido por Andrey Masiero</p>
+      </footer>
+    </section>
+  </body>
+</html>
