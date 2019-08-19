@@ -2,70 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Cadastro de Produtos</title>
-<style type="text/css">
-* {
-	font: 13px Roboto;
-	color: #363636;
-}
-input {
-	display: block;
-	padding: 5px;
-	width: 200px;
-	margin-bottom: 10px;
-}
-button {
-	margin-bottom: 30px;
-}
-</style>
+<title>Formulario</title>
 </head>
 <body>
-
-	<div id="logado">
-		<p>Olá, <span></span>! Seja bem-vindo.</p>
-		<p><a href="logout">Deslogar</a></p> 
-	</div>
-	<form id="frm-login" action="login" method="post">
-		<label>Usuário:
-			<input type="text" name="usuario" placeholder="Informe seu usuário." />
-		</label>
-		<label>Senha:
-			<input type="password" name="senha" placeholder="Informe sua senha." />
-		</label>
+	<form action="exercicio7" method="post">
+		<input type="text" name="usuario" />
+		<input type="password" name="senha" />
 		<button>Enviar</button>
 	</form>
-	
-	<form id="frm-cadastro" action="produto" method="get">
-		<input type="text" name="nome" placeholder="Digite o nome do produto" />
-		<input type="text" name="quantidade"
-			placeholder="Digite a quantidade do produto" />
-		<button>Cadastrar</button>
-	</form>
-	<form id="frm-busca" action="pesquisar" method="get">
-		<button>Pesquisar Produtos</button>
-	</form>
-	
-	<script type="text/javascript">
-		function getCookie(name) {
-		  var value = "; " + document.cookie;
-		  var parts = value.split("; " + name + "=");
-		  if (parts.length == 2) return parts.pop().split(";").shift();
-		}
-		
-		var cookie = getCookie("usuario.logado");
-		if (!(cookie === undefined)) {
-			document.getElementById("logado").style.display = "block";
-			document.querySelector("#frm-login").style.display = "none";
-			document.querySelector("#frm-cadastro").style.display = "block";
-			document.querySelector("#frm-busca").style.display = "block";
-		} else {
-			document.getElementById("logado").style.display = "none";
-			document.querySelector("#frm-login").style.display = "block";
-			document.querySelector("#frm-cadastro").style.display = "none";
-			document.querySelector("#frm-busca").style.display = "none";
-		}
-	</script>
-	
 
 </body>
 </html>
