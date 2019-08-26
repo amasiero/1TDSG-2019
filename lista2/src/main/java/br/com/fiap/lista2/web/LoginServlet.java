@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -33,6 +34,8 @@ public class LoginServlet extends HttpServlet{
 			out.println("<h2>Usuário e/ou senha inválidos!</h2>");
 		}else {
 			out.println("<h2> O usuario " + u.getNome() + " está logado com sucesso.</h2>");
+			Cookie cookie = new Cookie("usuario.logado", u.getNome());
+			resp.addCookie(cookie);
 		}
 		out.println("<a href=\"index.html\">Voltar para Home</a>");
 		out.println("</body></html>");

@@ -8,6 +8,10 @@ public class UsuarioDAO {
 	
 	private static ArrayList<Usuario> USUARIOS = new ArrayList<>();
 	
+	static {
+		USUARIOS.add(new Usuario("Andrey","andrey", "123"));
+	}
+	
 	public void adicionar(Usuario u) {
 		USUARIOS.add(u);
 	}

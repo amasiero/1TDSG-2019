@@ -1,3 +1,5 @@
+console.log(document.cookie);
+
 function getCookie(name) {
   var value = "; " + document.cookie;
   var parts = value.split("; " + name + "=");
@@ -5,6 +7,17 @@ function getCookie(name) {
 }
 
 var cookie = getCookie("usuario.logado");
+var info = document.getElementById("info-logado");
 if(!(cookie === undefined)) {
-	// Se o cookie existir
+	// Logado
+	info.style.display = "block";
+	info.querySelector("span").textContent = cookie;
+	document.querySelector("#frm-login").style.display = "none";
+	document.querySelector("#acessa-cadastro").style.display = "none";
+} else {
+	// Não Logado
+	info.style.display = "none";
+	info.querySelector("span").textContent = "";
+	document.querySelector("#frm-login").style.display = "block";
+	document.querySelector("#acessa-cadastro").style.display = "block";
 }
