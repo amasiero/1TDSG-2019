@@ -39,7 +39,7 @@ public class AssistantV1Servlet extends HttpServlet {
 
 		// Configuração de autenticação do serviço
 		IamOptions options = new IamOptions.Builder()
-				.apiKey("<apikey>")
+				.apiKey("<api-key>")
 				.build();
 		
 		// Criando o objeto do serviço desejado

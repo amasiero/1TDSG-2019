@@ -38,7 +38,7 @@ public class SpeechToTextServlet extends HttpServlet {
 		}
 		
 		IamOptions options = new IamOptions.Builder()
-				.apiKey("<apikey>")
+				.apiKey("<api-key>")
 				.build();
 		
 		SpeechToText service = new SpeechToText(options);
