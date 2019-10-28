@@ -12,7 +12,7 @@ import br.com.fiap.servlet_ajax.model.entities.Empresa;
  *
  */
 public class EmpresaDAO {
-	private final static Map<Long, Empresa> EMPRESAS = new HashMap<>();
+	private final static Map<Long, Empresa> EMPRESAS = new HashMap<Long, Empresa>();
 	static {
 		geraIdEAdiciona(new Empresa("Twitter"));
 		geraIdEAdiciona(new Empresa("IBM"));
@@ -31,9 +31,9 @@ public class EmpresaDAO {
 	 */
 	public List<Empresa> buscaPorSimilaridade(String nome) {
 		if (nome == null)
-			return new ArrayList<>(EMPRESAS.values());
+			return new ArrayList<Empresa>(EMPRESAS.values());
 
-		List<Empresa> similares = new ArrayList<>();
+		List<Empresa> similares = new ArrayList<Empresa>();
 		for (Empresa empresa : EMPRESAS.values()) {
 			if (empresa.getNome().toLowerCase().contains(nome.toLowerCase()))
 				similares.add(empresa);
